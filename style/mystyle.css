@@ -1,0 +1,26 @@
+.landing-page { 
+  background-size: cover;
+  min-height: 93.1vh;
+  position: relative;
+  color: white;
+}
+
+.landing-page p {
+  font-size: 3rem;
+}
+
+.form-control {
+  background-color: rgb(219, 217, 217);
+  /* color: black !important; */
+}
+
+.form-control::placeholder {
+  color: gray;
+}
+
+.color-overlay {
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  height: 100%;
+  width: 100%;
+}

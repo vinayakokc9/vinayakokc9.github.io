@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ElderCart Search Results</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Include Bootstrap 5 CSS and JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <style>
+        .horizontal-scrollable {
+            overflow-x: auto;
+        }
+        .card-body:nth-child(2n+1) { 
+            background: rgb(142, 142, 128); 
+        } 
+        .card-body:nth-child(2n+2) { 
+            background: rgb(56, 56, 56); 
+        }
+        .card-body {
+            color: white;
+            font-size: 48px;
+            min-width: 1200px;
+            margin-right: 5px;
+            text-align: center;
+        }
+        .card-body img {
+            max-width: 40%;
+        }
+        P.cardDesc {
+            margin-left: 10px;
+        }
+        .float-container {
+            border: 3px solid #fff;
+            padding: 20px;
+        }
+
+        .float-child {
+            width: 50%;
+            float: left;
+            padding: 20px;
+            border: 2px solid rgb(44, 19, 19);
+        }  
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">ElderCart</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+    
+            <ul class="navbar-nav d-flex me-auto">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+              </form>
+            </ul>
+    
+            <li class="nav-item dropdown d-flex btn">
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                &#9776;
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Tutorials</a></li>
+                <li><a class="dropdown-item" href="#">About Us</a></li>
+              </ul>
+            </li>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid py-2">
+        <div class="horizontal-scrollable">
+        <h3 class="font-weight-light">Your Top 3:</h3>
+        <div class="d-flex flex-row flex-nowrap">
+
+            <div class="card card-body">Xbox
+                <div class="float-container">
+                    <div class="float-child">
+                        <P class="cardDesc">description<br>features<br>whats in the box</p>
+                    </div>
+                    <div class="float-child">
+                        <a href="checkout.html"><img src="images/XboxImage.png" alt="Xbox Image" style="width:232px;height:232px;"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-body">PlayStation
+                <div class="float-container">
+                    <div class="float-child">
+                        <P class="cardDesc">description<br>features<br>whats in the box</P>
+                    </div>
+                    <div class="float-child">
+                        <a href="checkout.html"><img src="images/PlayStationImage.png" alt="PlayStation Image" style="width:232px;height:232px;"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-body">Switch
+                <div class="float-container">
+                    <div class="float-child">
+                        <P class="cardDesc">description<br>features<br>whats in the box</P>
+                    </div>
+                    <div class="float-child">
+                        <a href="checkout.html"><img src="images/SwitchImage.png" alt="Switch Image" style="width:232px;height:232px;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
