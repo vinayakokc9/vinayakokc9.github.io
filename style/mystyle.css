@@ -9,6 +9,17 @@
   font-size: 3rem;
 }
 
+.checkout-page { 
+  background-size: cover;
+  min-height: 93.2vh;
+  position: relative;
+  color: white;
+}
+
+.checkout-page p {
+  font-size: 3rem;
+}
+
 .form-control {
   background-color: rgb(219, 217, 217);
   /* color: black !important; */
