@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="style/mystyle.css">
+    <link rel="stylesheet" type="text/css" href="style/mystyle.css">
 
     <script src="app.js"> </script>
 
@@ -108,57 +108,47 @@
         </div>
     </nav>
 
-    <!-- <div class="container-fluid py-2">
-        <div class="horizontal-scrollable">
-            <h3 class="font-weight-light">Here are three great options! Click on a product to learn more.</h3>
-            <div class="d-flex flex-row flex-nowrap">
 
-                <div class="card card-body">Xbox
-                    <div class="float-container">
-                        <div class="float-child">
-                            <P class="cardDesc">Description<br>Features<br>Whats In The Box</p>
-                        </div>
-                        <div class="float-child">
-                            <a href="XboxProductPage.html"><img src="images/XboxImage.png" alt="Xbox Image"
-                                    style="width:232px;height:232px;"></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card card-body">PlayStation
-                    <div class="float-container">
-                        <div class="float-child">
-                            <P class="cardDesc">Description<br>Features<br>Whats In The Box</P>
-                        </div>
-                        <div class="float-child">
-                            <a href="PlayStationProductPage.html"><img src="images/PlayStationImage.png"
-                                    alt="PlayStation Image" style="width:232px;height:232px;"></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card card-body">Switch
-                    <div class="float-container">
-                        <div class="float-child">
-                            <P class="cardDesc">Description<br>Features<br>Whats In The Box</P>
-                        </div>
-                        <div class="float-child">
-                            <a href="SwitchProductPage.html"><img src="images/SwitchImage.png" alt="Switch Image"
-                                    style="width:232px;height:232px;"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div> -->
-
-    <div class="container-fluid ">
-        <div id="carouselExampleControls" class="carousel slide"  >
+    <div class="container-fluid my-5">
+        <div id="carouselExampleControls" class="carousel slide justify-content-center">
             <div class="carousel-inner text-center">
                 <div class="carousel-item active">
-                    <img src="images/PlaystationImage.png" class="d-block mx-auto w-25" alt="...">
+
+                    <div class="card d-block mx-auto" style="width: 48rem;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="images/PlaystationImage.png" class="card-img-top border-end p-3"
+                                    alt="...">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body text-s">
+                                    <h3 class="card-title">Xbox</h3>
+                                    <div class="text-start">
+                                        <p class="card-text"><strong>$399.99</strong></p>
+                                        <p class="card-text">
+                                            Unveiling the new gaming console provided by Microsoft.
+                                        </p>
+                                        <hr class=""/>
+                                        <p class="text-start">Features</p>
+                                        <ul>
+                                            <li>10 GB RAM</li>
+                                            <li>Backward Compatibility</li>
+                                        </ul>
+                                        <hr class=""/>
+
+                                    </div>
+                                    <a href="XboxProductPage.html" class="btn btn-outline-primary btn-lg">Learn More</a>
+
+                                    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+              
+                    </div>
                 </div>
+
                 <div class="carousel-item">
                     <img src="images/XboxImage.png" class="d-block mx-auto w-25" alt="...">
                 </div>
@@ -166,19 +156,19 @@
                     <img src="images/SwitchImage.png" class="d-block mx-auto w-25" alt="...">
                 </div>
             </div>
-            <button class="carousel-control-prev"  type="button" data-bs-target="#carouselExampleControls"
-                 data-bs-slide="prev" data-bs-theme-value="dark">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev" data-bs-theme-value="dark">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next"   type="button" data-bs-target="#carouselExampleControls"
-                 data-bs-slide="next" data-bs-theme-value="dark">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next" data-bs-theme-value="dark">
                 <span class="carousel-control-next-icon" style="color:red" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
     </div>
-    
+
 
 
 
