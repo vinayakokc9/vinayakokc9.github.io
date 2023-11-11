@@ -45,3 +45,8 @@
 .carousel-control-next-icon {
   filter: invert(1);
 }
+
+.info-icon {
+  width: 4rem;
+  height: 4rem;
+}

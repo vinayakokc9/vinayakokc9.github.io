@@ -9,9 +9,6 @@ function ready() {
         var button = addCartButton[i]
         button.addEventListener('click', addtoCart)
     }
-
-
-
     
 }
 function  updateTotal() {
@@ -43,7 +40,7 @@ function addItem(name, price, picture) {
         var itemContent = `
         <div class="row border-top border-bottom">
           <div class="row align-items-center product-item">
-            <div class="col-2"><img src="${picture}" alt="" class="img-fluid"></div>
+            <div class="col-2 ps-0"><img src="${picture}" alt="" class="img-fluid"></div>
             <div class="col">
               <div class="row cart-title">${name}</div>
             </div>

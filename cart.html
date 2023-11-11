@@ -66,13 +66,12 @@
   </nav>
 
 
-  <div class="singleCol container text-center">
-    <p>Shopping Cart</p>
-  </div>
+  <h1 class="text-center py-3 border-bottom">Shopping Cart</h1>
+
 
 
   <div class="row">
-    <div class="col-md-8 your-cart">
+    <div class="col-md-8 your-cart ps-5 ">
 
       <div class="title">
         <div class="row">
@@ -81,10 +80,12 @@
           </div>
         </div>
       </div>
-      <div class="product-list">
+
+      <div class="product-list ps-3">
+        
         <div class="row border-top border-bottom">
           <div class="row align-items-center product-item">
-            <div class="col-2"><img src="https://placehold.co/100x100" alt="" class="img-fluid"></div>
+            <div class="col-2 ps-0"><img src="https://placehold.co/100x100" alt="" class="img-fluid"></div>
             <div class="col">
               <div class="row cart-title">Xbox</div>
             </div>
@@ -95,7 +96,7 @@
 
         <div class="row border-top border-bottom">
           <div class="row align-items-center product-item">
-            <div class="col-2"><img src="https://placehold.co/100x100" alt="" class="img-fluid"></div>
+            <div class="col-2 ps-0"><img src="https://placehold.co/100x100" alt="" class="img-fluid"></div>
             <div class="col">
               <div class="row cart-title">Switch</div>
             </div>
@@ -106,7 +107,7 @@
 
         <div class="row border-top border-bottom">
           <div class="row align-items-center product-item">
-            <div class="col-2"><img src="https://placehold.co/100x100" alt="" class="img-fluid"></div>
+            <div class="col-2 ps-0"><img src="https://placehold.co/100x100" alt="" class="img-fluid"></div>
             <div class="col">
               <div class="row cart-title">Playstation</div>
             </div>
@@ -116,11 +117,68 @@
         </div>
       </div>
 
-
+<!-- add input and then remove functionality in js script -->
 
 
 
     </div>
+
+    <div class="col-md-4 px-5 cart-summary">
+      <h4 class="text-center">Summary</h4>
+
+      <div class="d-flex justify-content-between">
+        <h5>Items: </h5>
+        <h5 class="total-items">1</h5>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <h5>Shipping: </h5>
+        <h5>$2.50</h5>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <h5>Tax: </h5>
+        <h5 class="total-tax">$3.40</h5>
+      </div>
+
+      <div class="d-flex pt-5 justify-content-center ">
+        <h4 class="pe-1">Total: </h4>
+        <h4 class="total-price"> $9.90</h4>
+      </div>
+
+
+
+      <div class="py-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+          <symbol id="info-fill" viewBox="0 0 16 16">
+            <path
+              d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+          </symbol>
+        </svg>
+        <div class="alert alert-primary d-flex align-items-center" role="alert">
+          <svg class="bi me-2 info-icon" role="img" aria-label="Info:">
+            <use xlink:href="#info-fill" />
+          </svg>
+          <div>
+            Click here to learn more on how we keep your payment information safe.
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <a href="checkout.html" class="btn btn-primary btn-lg">Checkout</a>
+
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
   </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
