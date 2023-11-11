@@ -1,4 +1,4 @@
-.landing-page {
+.landing-page { 
   background-size: cover;
   min-height: 93.2vh;
   position: relative;
@@ -9,7 +9,7 @@
   font-size: 3rem;
 }
 
-.checkout-page {
+.checkout-page { 
   background-size: cover;
   min-height: 93.2vh;
   position: relative;
@@ -31,10 +31,11 @@
 
 .color-overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0,0.5);
   height: 100%;
   width: 100%;
 }
+<<<<<<< HEAD
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -50,3 +51,5 @@
   width: 4rem;
   height: 4rem;
 }
+=======
+>>>>>>> a1e61b6bead00045786335b3843c640f2ac936f3
