@@ -35,3 +35,21 @@
   height: 100%;
   width: 100%;
 }
+<<<<<<< HEAD
+
+.carousel-control-prev,
+.carousel-control-next {
+  color: black;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.info-icon {
+  width: 4rem;
+  height: 4rem;
+}
+=======
+>>>>>>> a1e61b6bead00045786335b3843c640f2ac936f3
