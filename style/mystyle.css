@@ -1,4 +1,4 @@
-.landing-page {
+.landing-page { 
   background-size: cover;
   min-height: 93.2vh;
   position: relative;
@@ -9,7 +9,7 @@
   font-size: 3rem;
 }
 
-.checkout-page {
+.checkout-page { 
   background-size: cover;
   min-height: 93.2vh;
   position: relative;
@@ -31,19 +31,7 @@
 
 .color-overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0,0.5);
   height: 100%;
   width: 100%;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  color: black;
-  /* Set the color to white or any other color that fits your dark theme */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1);
-  /* Invert the color of the arrow icon to match the dark theme */
 }
