@@ -39,11 +39,9 @@
 .carousel-control-prev,
 .carousel-control-next {
   color: black;
-  /* Set the color to white or any other color that fits your dark theme */
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1);
-  /* Invert the color of the arrow icon to match the dark theme */
 }
