@@ -53,12 +53,8 @@
             &#9776;
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Tutorials</a></li>
-            <li><a class="dropdown-item" href="#">About Us</a></li>
+            <li><a class="dropdown-item" href="tutorials.html">Tutorials</a></li>
+            <li><a class="dropdown-item" href="index.html">About Us</a></li>
           </ul>
         </li>
       </div>
@@ -85,26 +81,29 @@
         
         <div class="row border-top border-bottom">
           <div class="row align-items-center product-item">
-            <div class="col-2 ps-0"><img src="https://placehold.co/100x100" alt="" class="img-fluid"></div>
+            <div class="col-2 ps-0">
+              <img src="images/SwitchImage.png" alt="" class="img-fluid"></div>
             <div class="col">
-              <div class="row cart-title">Xbox</div>
+              <div class="row cart-title">Nintendo Switch</div>
             </div>
-            <div class="col cart-quantity">Quantity: ◻︎</div>
-            <div class="col cart-price">$X.XX</div>
+            <div class="col cart-quantity">Quantity: 1</div>
+            <div class="col cart-price">Price: $399.99</div>
           </div>
         </div>
 
         <div class="row border-top border-bottom">
           <div class="row align-items-center product-item">
-            <div class="col-2 ps-0"><img src="https://placehold.co/100x100" alt="" class="img-fluid"></div>
-            <div class="col">
-              <div class="row cart-title">Switch</div>
+            <div class="col-2 ps-0">
+              <!-- <img src="https://placehold.co/100x100" alt="" class="img-fluid"> -->
             </div>
-            <div class="col cart-quantity">Quantity: ◻︎</div>
-            <div class="col cart-price">$X.XX</div>
+            <div class="col">
+              <div class="row cart-title"></div>
+            </div>
+            <div class="col cart-quantity"></div>
+            <div class="col cart-price"></div>
           </div>
         </div>
-
+<!-- 
         <div class="row border-top border-bottom">
           <div class="row align-items-center product-item">
             <div class="col-2 ps-0"><img src="https://placehold.co/100x100" alt="" class="img-fluid"></div>
@@ -114,7 +113,7 @@
             <div class="col cart-quantity">Quantity: ◻︎</div>
             <div class="col cart-price">$X.XX</div>
           </div>
-        </div>
+        </div> -->
       </div>
 
 <!-- add input and then remove functionality in js script -->
@@ -143,7 +142,7 @@
 
       <div class="d-flex pt-5 justify-content-center ">
         <h4 class="pe-1">Total: </h4>
-        <h4 class="total-price"> $9.90</h4>
+        <h4 class="total-price"> $905.88</h4>
       </div>
 
 
@@ -155,12 +154,12 @@
               d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
           </symbol>
         </svg>
-        <div class="alert alert-primary d-flex align-items-center" role="alert">
+        <div class="alert alert-primary d-flex align-items-center"  role="alert">
           <svg class="bi me-2 info-icon" role="img" aria-label="Info:">
             <use xlink:href="#info-fill" />
           </svg>
-          <div>
-            Click here to learn more on how we keep your payment information safe.
+          <div href="tutorials.html">
+            Click <a href="tutorials.html">here</a> to learn more on how we keep your payment information safe.
           </div>
         </div>
         <div class="d-flex justify-content-center">
@@ -180,7 +179,17 @@
 
 
   </div>
-
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+        <li class="nav-item"><a href="return.html" class="nav-link px-2 text-body-secondary">Return Policy</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-body-secondary">Customer Support: 403-221-2341</a></li>
+      </ul>
+      <p class="text-center text-body-secondary">&copy; ElderCart Inc</p>
+    </footer>
+  </div>
+  
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
