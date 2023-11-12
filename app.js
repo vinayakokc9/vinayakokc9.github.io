@@ -52,7 +52,7 @@ function addItem(name, price, picture) {
         cartRow.innerHTML = itemContent
         cartItems.append(cartRow)
 
-        cartWindow.getElementsByClassName('total-items')[0].innerText = 2;
+        // cartWindow.getElementsByClassName('total-items')[0].innerText = 2;
         // getElementByClassName("total-items").innerText = "2";
     }
     
