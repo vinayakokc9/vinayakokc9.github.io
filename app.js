@@ -4,7 +4,7 @@ if (document.readyState == 'loading') {
     ready()
 }
 function ready() {
-    var addCartButton = document.getElementsByClassName('btn-primary')
+    var addCartButton = document.getElementsByClassName('btn-warning')
     for (var i = 0; i < addCartButton.length; i++) {
         var button = addCartButton[i]
         button.addEventListener('click', addtoCart)
@@ -18,10 +18,10 @@ function addtoCart(event) {
     var button = event.target
     var productItem = button.parentElement
 
-    var productName = productItem.getElementsByClassName('product-name')[0].innerText
+    var productName = document.querySelector('.product-name').innerText
     console.log(productName)
 
-    var productPrice = productItem.getElementsByClassName('product-price')[0].innerText
+    var productPrice = document.querySelector('.product-price').innerText
     console.log(productPrice)
 
     var productPicture = document.querySelector(".product-picture").src
@@ -51,6 +51,9 @@ function addItem(name, price, picture) {
         `
         cartRow.innerHTML = itemContent
         cartItems.append(cartRow)
+
+        cartWindow.getElementsByClassName('total-items')[0].innerText = 2;
+        // getElementByClassName("total-items").innerText = "2";
     }
     
 
