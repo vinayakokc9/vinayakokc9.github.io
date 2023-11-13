@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css"> 
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="app.js" async> </script>
 
     <style>
         body {
@@ -76,11 +76,14 @@
             margin-top: 10px;
         }
 
-        table, th, td {
+        table,
+        th,
+        td {
             border: 1px solid #ddd;
         }
 
-        th, td {
+        th,
+        td {
             padding: 10px;
             text-align: left;
         }
@@ -107,44 +110,48 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">ElderCart</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            </ul>
-    
-            <ul class="navbar-nav d-flex me-auto">
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="What do I want?" aria-label="Search">
-                <a class="btn btn-outline-secondary" href="searchResults.html">Search</a>
-              </form>
-            </ul>
-    
-            <a href="cart.html">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-              </svg>
-            </a>
-            
-    
-            <li class="nav-item dropdown d-flex btn">
-              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                &#9776;
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="tutorials.html">Tutorials</a></li>
-                <li><a class="dropdown-item" href="aboutUs.html">About Us</a></li>
-              </ul>
-            </li>
-          </div>
+            <a class="navbar-brand" href="index.html">ElderCart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+
+                <ul class="navbar-nav d-flex me-auto">
+                    <form class="d-flex" role="search">
+                        <input class="search-box form-control me-2" type="search" placeholder="What do I want?"
+                            aria-label="Search">
+                        <a class="btn btn-outline-secondary" onclick="return searchBehavior();">Search</a>
+                    </form>
+                </ul>
+
+                <a href="cart.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-cart" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </a>
+
+
+                <li class="nav-item dropdown d-flex btn">
+                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        &#9776;
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="tutorials.html">Tutorials</a></li>
+                        <li><a class="dropdown-item" href="aboutUs.html">About Us</a></li>
+                    </ul>
+                </li>
+            </div>
         </div>
-      </nav>
+    </nav>
+    <h1 class="text-center py-3 border-bottom">Checkout</h1>
+
     <div class="form-container">
-    
-        <h1 class="text-center py-3 border-bottom">Checkout</h1>
 
         <!-- Personal Information -->
         <section>
@@ -154,7 +161,7 @@
                 <input type="text" id="name" name="name" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="example@example.com">
             </form>
         </section>
 
@@ -169,7 +176,7 @@
                 <input type="text" id="city" name="city" required>
 
                 <label for="zip">ZIP Code:</label>
-                <input type="text" id="zip" name="zip" required>
+                <input type="text" id="zip" name="zip" placeholder="XXXXX" required>
             </form>
         </section>
 
@@ -178,13 +185,13 @@
             <h2>Payment Information</h2>
             <form>
                 <label for="card">Credit Card Number:</label>
-                <input type="text" id="card" name="card" required>
+                <input type="text" id="card" name="card" placeholder="XXXX-XXXX-XXXX-XXXX" required>
 
                 <label for="expiration">Expiration Date:</label>
                 <input type="text" id="expiration" name="expiration" placeholder="MM/YY" required>
 
                 <label for="cvv">CVV:</label>
-                <input type="text" id="cvv" name="cvv" required>
+                <input type="text" id="cvv" name="cvv" placeholder="XXX" required>
             </form>
         </section>
 
@@ -224,21 +231,24 @@
         </section>
 
     </div>
+
     <div class="container">
         <footer class="py-3 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="return.html" class="nav-link px-2 text-body-secondary">Return Policy</a></li>
-            <li class="nav-item"><a class="nav-link px-2 text-body-secondary">Customer Support: 403-221-2341</a></li>
-          </ul>
-          <p class="text-center text-body-secondary">&copy; ElderCart Inc</p>
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="return.html" class="nav-link px-2 text-body-secondary">Return Policy</a>
+                </li>
+                <li class="nav-item"><a class="nav-link px-2 text-body-secondary">Customer Support: 403-221-2341</a>
+                </li>
+            </ul>
+            <p class="text-center text-body-secondary">&copy; ElderCart Inc</p>
         </footer>
-      </div>
+    </div>
 
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
 
