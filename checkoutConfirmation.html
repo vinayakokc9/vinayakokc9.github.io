@@ -15,6 +15,8 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="style/mystyle.css">
+    <script src="app.js" async> </script>
+
 </head>
 
 <body>
@@ -36,9 +38,9 @@
 
                 <ul class="navbar-nav d-flex me-auto">
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder=""
+                        <input class="search-box form-control me-2" type="search" placeholder=""
                             aria-label="Search">
-                        <a class="btn btn-outline-secondary" href="searchResults.html">Search</a>
+                        <a class="btn btn-outline-secondary" onclick="return searchBehavior();">Search</a>
                     </form>
                 </ul>
 

@@ -9,9 +9,44 @@ function ready() {
         var button = addCartButton[i]
         button.addEventListener('click', addtoCart)
     }
+
+    var userInput = document.getElementsByClassName('search-box')[0]
+    console.log(userInput)
+    userInput.addEventListener('keypress', function (event) {
+        if(event.key === 'Enter') {
+            event.preventDefault()
+            document.getElementsByClassName("btn-outline-secondary")[0].click()
+        }
+    })
     
 }
-function  updateTotal() {
+
+function searchBehavior() {
+    var searchInput = document.getElementsByClassName('search-box')[0].value
+    console.log(searchInput)
+    const searchKeywords = ["playstation", "play station", "xbox", "switch", "nintendo switch", "video games", "games"]
+
+    if(searchKeywords.includes(searchInput.toLowerCase())) {
+        window.location.href = "searchResults.html"   
+    }
+    else if (searchInput == ""){
+        alert("Search box cannot be blank. Please enter a value in the search field.")
+    }
+    else {
+        alert("No search results found. Please search for another item.")
+    }
+}
+
+function  updateSummary(cartWindow, cartLength, price) {
+// updating total item count
+    var itemCount = cartWindow.document.getElementById('total-items')
+    itemCount.innerText = cartLength
+    
+    // updating total price
+    var totalPrice = cartWindow.document.getElementById('total-price');
+    totalPrice.innerText = price
+
+
     
 }
 function addtoCart(event) {
@@ -33,6 +68,7 @@ function addtoCart(event) {
 
 function addItem(name, price, picture) {
     var cartWindow = window.open('cart.html')
+    
 
     cartWindow.onload = function() {
         var cartRow = cartWindow.document.createElement('div')
@@ -52,8 +88,25 @@ function addItem(name, price, picture) {
         cartRow.innerHTML = itemContent
         cartItems.append(cartRow)
 
-        // cartWindow.getElementsByClassName('total-items')[0].innerText = 2;
-        // getElementByClassName("total-items").innerText = "2";
+        // update number of items in cart
+        var cartCount = cartWindow.document.getElementsByClassName('product-item').length
+       
+        // update total price
+        var totalPrice = 0;
+        var priceList = cartWindow.document.querySelectorAll('.cart-price')
+        console.log(priceList)
+
+        priceList.forEach(function (item) {
+            var priceText = item.innerText.replace('Price: $', '')
+            var price = parseFloat(priceText);
+
+            totalPrice += price
+        });
+        totalPrice += 2.5 + 3.4
+
+
+        updateSummary(cartWindow, cartCount, totalPrice);
+
     }
     
 

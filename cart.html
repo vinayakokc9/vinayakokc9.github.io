@@ -34,8 +34,8 @@
 
         <ul class="navbar-nav d-flex me-auto">
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="What do I want?" aria-label="Search">
-            <a class="btn btn-outline-secondary" href="searchResults.html">Search</a>
+            <input class="search-box form-control me-2" type="search" placeholder="What do I want?" aria-label="Search">
+            <a class="btn btn-outline-secondary" onclick="return searchBehavior();">Search</a>
           </form>
         </ul>
 
@@ -84,17 +84,17 @@
             <div class="col-2 ps-0">
               <img src="images/SwitchImage.png" alt="" class="img-fluid"></div>
             <div class="col">
-              <div class="row cart-title">Nintendo Switch</div>
+              <div class=" cart-title">Nintendo Switch</div>
             </div>
             <div class="col cart-quantity">Quantity: 1</div>
             <div class="col cart-price">Price: $399.99</div>
           </div>
         </div>
-
+<!-- 
         <div class="row border-top border-bottom">
           <div class="row align-items-center product-item">
             <div class="col-2 ps-0">
-              <!-- <img src="https://placehold.co/100x100" alt="" class="img-fluid"> -->
+               <img src="https://placehold.co/100x100" alt="" class="img-fluid"> 
             </div>
             <div class="col">
               <div class="row cart-title"></div>
@@ -102,9 +102,9 @@
             <div class="col cart-quantity"></div>
             <div class="col cart-price"></div>
           </div>
-        </div>
-<!-- 
-        <div class="row border-top border-bottom">
+        </div> 
+ -->
+        <!-- <div class="row border-top border-bottom"> 
           <div class="row align-items-center product-item">
             <div class="col-2 ps-0"><img src="https://placehold.co/100x100" alt="" class="img-fluid"></div>
             <div class="col">
@@ -127,7 +127,7 @@
 
       <div class="d-flex justify-content-between">
         <h5>Items: </h5>
-        <h5 class="total-items">1</h5>
+        <h5 id="total-items">1</h5>
       </div>
 
       <div class="d-flex justify-content-between">
@@ -137,12 +137,12 @@
 
       <div class="d-flex justify-content-between">
         <h5>Tax: </h5>
-        <h5 class="total-tax">$3.40</h5>
+        <h5 id="total-tax">$3.40</h5>
       </div>
 
       <div class="d-flex pt-5 justify-content-center ">
         <h4 class="pe-1">Total: </h4>
-        <h4 class="total-price"> $905.88</h4>
+        <h4 id="total-price"> $404.90</h4>
       </div>
 
 
