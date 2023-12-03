@@ -11,7 +11,40 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="app.js" async> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            function validateForm() {
+                var isValid = true;
+                var blankFields = [];
+    
+                $('form input:not(.search-box)').each(function () {
+                    if ($(this).val() === '') {
+                        isValid = false;
+                        $(this).addClass('is-invalid');
+                        blankFields.push($(this).attr('name') || $(this).attr('id') || 'Unnamed Field');
+                    } else {
+                        $(this).removeClass('is-invalid');
+                    }
+                });
+    
+                if (!isValid) {
+                    alert('Enter the following fields accurately: ' + blankFields.join(', '));
+                }
+    
+                return isValid;
+            }
+    
+            $('a[type="submit"]').click(function (e) {
+                e.preventDefault();
+                if (validateForm()) {
+                    window.location.href = "checkoutConfirmation.html";
+                }
+            });
+        });
+    </script>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -227,7 +260,7 @@
 
         <!-- Submit Button -->
         <section>
-            <a href="checkoutConfirmation.html" type="submit">Place Order</a>
+            <a href="checkoutConfirmation.html" type="submit" id="placeOrderBtn">Place Order</a>
         </section>
 
     </div>
