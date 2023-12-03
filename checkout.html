@@ -42,6 +42,49 @@
                     window.location.href = "checkoutConfirmation.html";
                 }
             });
+
+            $('a[type="submit"]').click(function (e) {
+                e.preventDefault();
+                if (validateForm()) {
+                    showConfirmationModal();
+                }
+            });
+
+            function showConfirmationModal() {
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var address = $('#address').val();
+                var city = $('#city').val();
+                var zip = $('#zip').val();
+                var card = $('#card').val();
+                var expiration = $('#expiration').val();
+                var cvv = $('#cvv').val();
+
+                var products = [
+                    { name: 'Nintendo Switch', quantity: 1, price: '$399.00' },
+                    { name: 'Xbox', quantity: 1, price: '$499.00' }
+                ];
+
+                var confirmationMessage = 'Confirmation:\n\n';
+                confirmationMessage += 'Personal Information:\n';
+                confirmationMessage += 'Name: ' + name + '\n';
+                confirmationMessage += 'Email: ' + email + '\n';
+                confirmationMessage += 'Shipping Address:\n';
+                confirmationMessage += 'Address: ' + address + '\n';
+                confirmationMessage += 'City: ' + city + '\n';
+                confirmationMessage += 'ZIP Code: ' + zip + '\n';
+                confirmationMessage += 'Payment Information:\n';
+                confirmationMessage += 'Credit Card Number: ' + card + '\n';
+                confirmationMessage += 'Expiration Date: ' + expiration + '\n';
+                confirmationMessage += 'CVV: ' + cvv + '\n\n';
+                confirmationMessage += 'Order Summary:\n';
+
+                for (var i = 0; i < products.length; i++) {
+                    confirmationMessage += products[i].name + ' - Quantity: ' + products[i].quantity + ' - Price: ' + products[i].price + '\n';
+                }
+
+                alert(confirmationMessage);
+            }
         });
     </script>
     
@@ -260,7 +303,7 @@
 
         <!-- Submit Button -->
         <section>
-            <a href="checkoutConfirmation.html" type="submit" id="placeOrderBtn">Place Order</a>
+            <a href="checkoutConfirmation.html" type="submit" id="placeOrderBtn">Proceed to Confirmation</a>
         </section>
 
     </div>
