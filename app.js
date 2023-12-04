@@ -26,11 +26,16 @@ function searchBehavior() {
     var searchInput = document.getElementsByClassName('search-box')[0].value
     console.log(searchInput)
     const searchKeywords = ["playstation", "play station", "xbox", "switch", "nintendo switch", "gaming consoles", "video games", "games"]
-
-    if (searchKeywords.includes(searchInput.toLowerCase())) {
-        window.location.href = "searchResults.html"
+    for(var i = 0 ; i < searchKeywords.length; i++) {
+        if (searchKeywords[i].includes(searchInput.toLowerCase()) && searchInput.length > 3) {
+            window.location.href = "searchResults.html"
+            return;
+        }
+        
     }
-    else if (searchInput == "") {
+    
+     
+    if (searchInput == "") {
         alert("Search box cannot be blank. Please enter a value in the search field.")
     }
     else {
