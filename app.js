@@ -12,7 +12,7 @@ function ready() {
     }
 
     var userInput = document.getElementsByClassName('search-box')[0]
-    console.log(userInput)
+    // console.log(userInput)
     userInput.addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
             event.preventDefault()
@@ -24,11 +24,29 @@ function ready() {
 
 function searchBehavior() {
     var searchInput = document.getElementsByClassName('search-box')[0].value
-    console.log(searchInput)
-    const searchKeywords = ["playstation", "play station", "xbox", "switch", "nintendo switch", "gaming consoles", "video games", "games"]
+    var playstationItem = document.getElementsByClassName('playstation-item')[0];
+    var xboxItem = document.getElementsByClassName('xbox-item')[0];
+    var switchItem = document.getElementsByClassName('switch-item')[0];
+  
+    if(!xboxItem) {
+        console.error("Not found")
+    }
+    const searchKeywords = [ "xbox", "switch", "nintendo switch", "gaming consoles", "playstation", "play station", "video games", "games"]
     for(var i = 0 ; i < searchKeywords.length; i++) {
         if (searchKeywords[i].includes(searchInput.toLowerCase()) && searchInput.length > 3) {
-            window.location.href = "searchResults.html"
+            
+            if(i < 1) {
+               window.location.href = "searchResultsXbox.html" 
+            }
+            else if(i < 3) {
+                window.location.href = "searchResultsSwitch.html" 
+            }
+            else {
+                window.location.href = "searchResults.html" 
+            }
+            
+            
+
             return;
         }
         
@@ -42,6 +60,10 @@ function searchBehavior() {
         alert("No search results found. Please search for another item.")
     }
 }
+
+
+
+
 
 function updateSummary(cartWindow, cartLength, price) {
     // updating total item count
@@ -104,6 +126,8 @@ function addItem(name, price, picture) {
         var priceList = cartWindow.document.querySelectorAll('.cart-price')
         console.log(priceList)
 
+
+        
         priceList.forEach(function (item) {
             var priceText = item.innerText.replace('Price: $', '')
             var price = parseFloat(priceText);
