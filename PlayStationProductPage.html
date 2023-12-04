@@ -91,7 +91,8 @@
             <h1 class="product-name">PlayStation</h1>
             <p class="h4 product-price">Price: $499.99</p>
             <p class="h4">Elder Rating: 4.8 stars</p>
-            <p class="">Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for
+            <p class="">Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support
+              for
               haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation
               games.</p>
           </div>
@@ -101,28 +102,12 @@
             <a href="checkout.html" class="btn btn-success btn-lg mt-4">Buy Now</a>
           </div>
 
-
-
-
-
-        </div>
-
-
-
-
-        <div>
-
-        </div>
-
-        <div class="col">
-
-
         </div>
 
       </div>
     </div>
 
-    <div class="mt-5">
+    <!-- <div class="mt-5">
       <h3>Compare to Similar Products</h3>
       <table class="table table-striped">
         <thead>
@@ -164,8 +149,85 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
   </div>
+
+
+<div class="h3 text-center py-4">Compare with Similar Products</div>
+
+  <div class="container">
+    <div class="col ">
+      <div class="col d-flex justify-content-between">
+        <div class="col-2">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="productsDropdown"
+              data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              Select Products
+            </button>
+            <ul class="dropdown-menu" id="productsDropdownContent" onchange="updateTable()">
+              <li><label class="dropdown-item"><input type="checkbox" value="Playstation">Playstation</label></li>
+              <li><label class="dropdown-item"><input type="checkbox" value="Xbox">Xbox</label></li>
+              <li><label class="dropdown-item"><input type="checkbox" value="Switch">Switch</label></li>
+  
+            </ul>
+          </div>
+        </div>
+
+        
+        <div class="selected-options">
+          <strong>Selected Products:</strong> <span id="selectedProducts"></span><br>
+
+        </div>
+
+      </div>
+      
+      <div class="py-6">
+        <p></p>
+      </div>
+
+      <div class="col d-flex justify-content-between">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="featuresDropdown" data-bs-toggle="dropdown"
+            data-bs-auto-close="outside" aria-expanded="false">
+            Select Features
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="featuresDropdown" id="featuresDropdownContent" onchange="updateTable()">
+            <li><label class="dropdown-item"><input type="checkbox" value="Type">Type</label></li>
+            <li><label class="dropdown-item"><input type="checkbox" value="Color">Color</label></li>
+            <li><label class="dropdown-item"><input type="checkbox" value="Weight">Weight</label></li>
+            <li><label class="dropdown-item"><input type="checkbox" value="Customer Reviews">Customer Reviews</label></li>
+            
+          </ul>
+        </div>
+        <div class="selected-options">
+          <strong>Selected Features:</strong> <span id="selectedFeatures"></span>
+        </div>
+
+      </div>
+
+    </div>
+
+    
+  </div>
+
+
+
+
+
+
+  <table class="container mt-5" id="comparisonTable">
+    <thead>
+      <tr id="tableCol">
+        <th>Features \ Products</th>
+
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+
+    </tbody>
+  </table>
+  </div>
+
   <div class="container">
     <footer class="py-3 my-4">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
