@@ -92,7 +92,8 @@
             <h1 class="product-name">PlayStation</h1>
             <p class="h4 product-price">Price: $499.99</p>
             <p class="h4">Elder Rating: 4.8 stars</p>
-            <p class="">Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for
+            <p class="">Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support
+              for
               haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation
               games.</p>
           </div>
@@ -111,62 +112,85 @@
 
 
 
-        <div>
 
+      </div>
+    </div>
+  </div>
+
+  <div class="h3 text-center py-4">Compare with Similar Products</div>
+
+  <div class="container">
+    <div class="col ">
+      <div class="col d-flex justify-content-between">
+        <div class="col-2">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="productsDropdown"
+              data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              Select Products
+            </button>
+            <ul class="dropdown-menu" id="productsDropdownContent" onchange="updateTable()">
+              <li><label class="dropdown-item"><input type="checkbox" value="Playstation">Playstation</label></li>
+              <li><label class="dropdown-item"><input type="checkbox" value="Xbox">Xbox</label></li>
+              <li><label class="dropdown-item"><input type="checkbox" value="Switch">Switch</label></li>
+  
+            </ul>
+          </div>
         </div>
 
-        <div class="col">
-
+        
+        <div class="selected-options">
+          <strong>Selected Products:</strong> <span id="selectedProducts"></span><br>
 
         </div>
 
       </div>
+      
+      <div class="py-6">
+        <p></p>
+      </div>
+
+      <div class="col d-flex justify-content-between">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="featuresDropdown" data-bs-toggle="dropdown"
+            data-bs-auto-close="outside" aria-expanded="false">
+            Select Features
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="featuresDropdown" id="featuresDropdownContent" onchange="updateTable()">
+            <li><label class="dropdown-item"><input type="checkbox" value="Type">Type</label></li>
+            <li><label class="dropdown-item"><input type="checkbox" value="Color">Color</label></li>
+            <li><label class="dropdown-item"><input type="checkbox" value="Weight">Weight</label></li>
+            <li><label class="dropdown-item"><input type="checkbox" value="Customer Reviews">Customer Reviews</label></li>
+            
+          </ul>
+        </div>
+        <div class="selected-options">
+          <strong>Selected Features:</strong> <span id="selectedFeatures"></span>
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="mt-5">
-      <h3>Compare to Similar Products</h3>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>PlayStation</th>
-            <th>Xbox</th>
-            <th>Switch</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Type</td>
-            <td>Console</td>
-            <td>Console</td>
-            <td>Handheld</td>
-          </tr>
-          <tr>
-            <td>Color</td>
-            <td>White</td>
-            <td>Black</td>
-            <td>Black</td>
-          </tr>
-          <tr>
-            <td>Weight</td>
-            <td>14.7 lbs</td>
-            <td>9.7 lbs</td>
-            <td>0.66 lbs</td>
-          </tr>
-          <tr>
-            <td>Customer Reviews</td>
-            <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-              rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-              explicabo.</td>
-            <td>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-              dolores eos qui ratione voluptatem sequi nesciunt.</td>
-            <td>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
-              aliquid ex ea commodi consequatur?</td>
-          </tr>
-        </tbody>
-      </table>
+    <table class="container mt-5" id="comparisonTable">
+      <thead>
+        <tr id="tableCol">
+          <th>Features \ Products</th>
+  
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+  
+      </tbody>
+    </table>
     </div>
+    
   </div>
+
+
+
+
+
+
   <div class="container">
     <footer class="py-3 my-4">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">

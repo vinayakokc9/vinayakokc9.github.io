@@ -54,3 +54,35 @@
 body {
   background-color: #f8f6f1;
 }
+
+#comparisonTable {
+  display: none;
+  margin-top: 20px;
+   background-color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+ 
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.selected-options {
+  margin-bottom: 10px;
+}
