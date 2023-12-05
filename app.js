@@ -31,7 +31,7 @@ function searchBehavior() {
     if(!xboxItem) {
         console.error("Not found")
     }
-    const searchKeywords = [ "xbox", "switch", "nintendo switch", "gaming consoles", "playstation", "play station", "video games", "games", "fitbit watch", "samsung watch", "apple watch", "fitness watch"]
+    const searchKeywords = [ "xbox", "switch", "nintendo switch", "gaming consoles", "playstation", "play station", "video games", "games", "fitbit watch", "samsung watch", "apple watch", "fitness watch", "apple airpods", "headphones", "bose headphones", "beats headphones"]
     for(var i = 0 ; i < searchKeywords.length; i++) {
         if (searchKeywords[i].includes(searchInput.toLowerCase()) && searchInput.length > 3) {
             
@@ -50,8 +50,17 @@ function searchBehavior() {
             else if(i == 9) {
                 window.location.href = "searchResultsWatches3.html"
             }
-            else if(i > 9) {
+            else if(i > 9 && i < 12) {
                 window.location.href = "searchResultsWatches.html"
+            }
+            else if(i > 11 && i < 14) {
+                window.location.href = "searchResultsHeadphones.html"
+            }
+            else if(i == 14) {
+                window.location.href = "searchResultsHeadphones2.html"
+            }
+            else if(i == 15) {
+                window.location.href = "searchResultsHeadphones3.html"
             }
             return;
         }
@@ -185,6 +194,24 @@ var gameConsoles = {
         "Type": "Wrist Accessory",
         "Color": "Gold",
         "Weight": "24.66 grams",
+        "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
+    },
+    "Airpods": {
+        "Type": "Over-ear",
+        "Color": "Silver",
+        "Weight": "13.6 ounces",
+        "Customer Reviews": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    },
+    "Bose": {
+        "Type": "Over-ear",
+        "Color": "Black",
+        "Weight": "8.3 ounces",
+        "Customer Reviews": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    },
+    "Beats": {
+        "Type": "Over-ear",
+        "Color": "White/Gold",
+        "Weight": "9.17 ounces",
         "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
     }
 };
