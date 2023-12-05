@@ -31,7 +31,7 @@ function searchBehavior() {
     if(!xboxItem) {
         console.error("Not found")
     }
-    const searchKeywords = [ "xbox", "switch", "nintendo switch", "gaming consoles", "playstation", "play station", "video games", "games", "apple watch", "samsung watch", "fitness watch", "digital watch"]
+    const searchKeywords = [ "xbox", "switch", "nintendo switch", "gaming consoles", "playstation", "play station", "video games", "games", "fitbit watch", "samsung watch", "apple watch", "fitness watch"]
     for(var i = 0 ; i < searchKeywords.length; i++) {
         if (searchKeywords[i].includes(searchInput.toLowerCase()) && searchInput.length > 3) {
             
@@ -44,11 +44,15 @@ function searchBehavior() {
             else if(i > 2 && i < 8) {
                 window.location.href = "searchResults.html" 
             }
-            else if(i > 7 && i < 12) {
+            else if(i == 8) {
+                window.location.href = "searchResultsWatches2.html"
+            }
+            else if(i == 9) {
+                window.location.href = "searchResultsWatches3.html"
+            }
+            else if(i > 9) {
                 window.location.href = "searchResultsWatches.html"
             }
-            
-
             return;
         }
         
