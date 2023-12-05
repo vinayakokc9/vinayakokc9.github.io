@@ -6,7 +6,7 @@
   <title>ElderCart</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -38,7 +38,23 @@
             <a class="btn btn-outline-secondary" onclick="return searchBehavior();">Search</a>
           </form>
         </ul>
-
+        <style>
+            .search-box {
+        background-color: white;
+        font-size: 1.5rem; 
+        padding: 10px; 
+        width: 300px;
+    }
+            .search-box {
+                font-size: 1.5rem; 
+                padding: 20px; 
+                width: 600px; 
+            }
+            .navbar a svg.bi-cart {
+        width: 30px; 
+        height: 30px;
+    }
+        </style>
         <a href="cart.html">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
@@ -58,33 +74,103 @@
       </div>
     </div>
   </nav>
-
+  
   <div class="landing-page" style="background-image: url('./images/landing_image.jpg');">
-    <div class="color-overlay d-flex justify-content-center align-items-center">
-      <div class="singleCol container text-center">
-        <p>Shop with Ease</p>
+    <main>
+      <div class="product">
+        <a href="PlayStationProductPage.html">
+          <img src="images/PlaystationImage.jpg" alt="PlayStation">
+          <h2>PlayStation</h2>
+          <p>Unveiling the new 2023 gaming console provided by Sony.</p>
+          <p>Price: $399.99</p>
+        </a>
       </div>
-    </div>
+
+      <div class="product">
+        <a href="XboxProductPage.html">
+          <img src="images/XboxImage.jpg" alt="Xbox">
+          <h2>Xbox</h2>
+          <p>Unveiling the new gaming console provided by Microsoft.</p>
+          <p>Price: $399.99</p>
+        </a>
+      </div>
+
+      <div class="product">
+        <a href="SwitchProductPage.html">
+          <img src="images/SwitchImage.jpg" alt="Nintendo Switch">
+          <h2>Nintendo Switch</h2>
+          <p>Unveiling the new light gaming console provided by Nintendo.</p>
+          <p>Price: $399.99</p>
+        </a>
+      </div>
+    </main>
   </div>
-
-
-
+    
 <div class="container">
   <footer class="py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-      <li class="nav-item"><a href="return.html" class="nav-link px-2 text-body-secondary">Return Policy</a></li>
-      <li class="nav-item"><a class="nav-link px-2 text-body-secondary">Customer Support: 403-221-2341</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary" style="font-size: 1.5rem;">Home</a></li>
+      <li class="nav-item"><a href="return.html" class="nav-link px-2 text-body-secondary" style="font-size: 1.5rem;">Return Policy</a></li>
+      <li class="nav-item"><a class="nav-link px-2 text-body-secondary" style="font-size: 1.5rem;">Customer Support: 403-221-2341</a></li>
     </ul>
+    
     <p class="text-center text-body-secondary">&copy; ElderCart Inc</p>
   </footer>
 </div>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
 
 </body>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 10px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    footer {
+      background-color: #f5f5f5;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+    .navbar-brand {
+      font-size: 3.0rem;
+      padding: 20px;
+    }
+
+    .nav-item.dropdown.d-flex.btn .nav-link {
+      font-size: 2.5rem; 
+      padding: 10px 20px; 
+    }
+    .dropdown-item {
+      font-size: 2.0rem;
+    }
 
 </html>
