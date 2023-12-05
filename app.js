@@ -31,7 +31,7 @@ function searchBehavior() {
     if(!xboxItem) {
         console.error("Not found")
     }
-    const searchKeywords = [ "xbox", "switch", "nintendo switch", "gaming consoles", "playstation", "play station", "video games", "games", "apple watch", "samsung watch", "fitness", "watch"]
+    const searchKeywords = [ "xbox", "switch", "nintendo switch", "gaming consoles", "playstation", "play station", "video games", "games", "apple watch", "samsung watch", "fitness watch", "digital watch"]
     for(var i = 0 ; i < searchKeywords.length; i++) {
         if (searchKeywords[i].includes(searchInput.toLowerCase()) && searchInput.length > 3) {
             
