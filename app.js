@@ -328,10 +328,14 @@ function getData(product, feature) {
 
 
 
-function decreaseItem() {
-    if(quantity > 1) {
+function decreaseItem(event) {
+    if(quantity > 0) {
         quantity--;
         updateQuantity();
+    }
+    
+    if(quantity < 1) {
+        deleteItem(event);
     }
     // Call remove function if quantity reaches 0
 }
@@ -344,4 +348,13 @@ function increaseItem() {
 
 function updateQuantity() {
     document.getElementById('cart-quantity').innerText = "Quantity: " + quantity;
+}
+
+function deleteItem(event) {
+    parentDivElement = event.parentElement.parentElement.parentElement;
+    if (parentDivElement) {
+        parentDivElement.remove();
+    }
+    window.confirm("Item in your cart has been deleted.")
+    
 }
