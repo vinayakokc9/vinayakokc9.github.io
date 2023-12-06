@@ -129,7 +129,7 @@ function searchBehavior() {
         alert("Search box cannot be blank. Please enter a value in the search field.")
     }
     else {
-        alert("No search results found. Please search for another item.")
+        window.location.href = "searchResultsNotFound.html"
     }
 }
 
@@ -354,9 +354,14 @@ function updateQuantity(event) {
 
 function deleteItem(event) {
     parentDivElement = event.parentElement.parentElement.parentElement;
-    if (parentDivElement) {
-        parentDivElement.remove();
+    
+    if(window.confirm("Delete item in your cart?")) {
+        if (parentDivElement) {
+            parentDivElement.remove();
+        }
     }
-    window.confirm("Item in your cart has been deleted.")
+  
+    
+
     
 }
