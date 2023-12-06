@@ -86,3 +86,7 @@ th {
 .selected-options {
   margin-bottom: 10px;
 }
+
+.cart-minus {
+  text-decoration: none;
+}

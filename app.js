@@ -103,18 +103,40 @@ function addItem(name, price, picture) {
         var cartItems = cartWindow.document.getElementsByClassName('product-list')[0]
         var itemContent =
             `
-        <div class="row border-top border-bottom">
+            <div class="row border-top border-bottom">
           <div class="row align-items-center product-item">
             <div class="col-2 ps-0">
-                <img src="${picture}" alt="" class="img-fluid"></div>
-            <div class="col">
-              <div class="row cart-title">${name}</div>
+              <img src="${picture}" alt="" class="img-fluid">
             </div>
-            <div class="col cart-quantity">Quantity: 1</div>
-            <div class="col cart-price">${price}</div>
+            <div class="col">
+              <div class=" cart-title">${name}</div>
+            </div>
+
+            <div class="col d-flex">
+              <div class="d-flex flex-row">
+                <a class="mb-0 font-weight-bold cart-minus pe-2" href="javascript:void(0);" onclick="decreaseItem();"><strong>-</strong></a>
+                <p class="mb-0  ">Quantity: 1</p>
+                <p class="mb-0 font-weight-bold ps-2"><strong>+</strong></p>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <div class="col cart-price">${price}</div>
+              <a class="delete-item " onclick="return deleteItem()">X</a>
+            </div>
           </div>
         </div>
         `
+        // <div class="row border-top border-bottom">
+        //   <div class="row align-items-center product-item">
+        //     <div class="col-2 ps-0">
+        //         <img src="${picture}" alt="" class="img-fluid"></div>
+        //     <div class="col">
+        //       <div class="row cart-title">${name}</div>
+        //     </div>
+        //     <div class="col cart-quantity">Quantity: 1</div>
+        //     <div class="col cart-price">${price}</div>
+        //   </div>
+        // </div>
         cartRow.innerHTML = itemContent
         cartItems.append(cartRow)
 
