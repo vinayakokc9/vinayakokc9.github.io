@@ -98,3 +98,10 @@ th {
   color: green;
   cursor: pointer;
 }
+
+.delete-item {
+  font-size: 18px;
+  text-decoration: none;
+  color: gray;
+  cursor: pointer;
+}

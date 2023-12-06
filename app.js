@@ -186,14 +186,14 @@ function addItem(name, price, picture) {
 
             <div class="col d-flex">
               <div class="d-flex flex-row">
-                <a class="mb-0 font-weight-bold cart-minus pe-2" href="javascript:void(0);" onclick="decreaseItem();"><strong>-</strong></a>
-                <p class="mb-0  ">Quantity: 1</p>
-                <p class="mb-0 font-weight-bold ps-2"><strong>+</strong></p>
+                <a class="mb-0 font-weight-bold cart-minus pe-2" href="#" onclick="decreaseItem(this);"><strong>-</strong></a>
+                <p class="mb-0" id="cart-quantity">Quantity: 1</p>
+                <p class="mb-0 font-weight-bold cart-plus ps-2" href="#" onclick="increaseItem(this);"><strong>+</strong></p>
               </div>
             </div>
             <div class="col d-flex justify-content-end">
               <div class="col cart-price">${price}</div>
-              <a class="delete-item " onclick="return deleteItem()">X</a>
+              <a class="delete-item" href="#" onclick="deleteItem(this);">X</a>
             </div>
           </div>
         </div>
@@ -331,7 +331,7 @@ function getData(product, feature) {
 function decreaseItem(event) {
     if(quantity > 0) {
         quantity--;
-        updateQuantity();
+        updateQuantity(event);
     }
     
     if(quantity < 1) {
@@ -340,14 +340,16 @@ function decreaseItem(event) {
     // Call remove function if quantity reaches 0
 }
 
-function increaseItem() {
+function increaseItem(event) {
 
         quantity++;
-        updateQuantity();
+        updateQuantity(event);
 }
 
-function updateQuantity() {
-    document.getElementById('cart-quantity').innerText = "Quantity: " + quantity;
+function updateQuantity(event) {
+    parentElement = event.parentElement.querySelector('#cart-quantity');
+    console.log(parentElement);
+    parentElement.innerText = "Quantity: " + quantity;
 }
 
 function deleteItem(event) {
