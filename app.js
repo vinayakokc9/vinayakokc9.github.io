@@ -3,6 +3,63 @@ if (document.readyState == 'loading') {
 } else {
     ready()
 }
+var quantity = 1;
+var gameConsoles = {
+    "Playstation": {
+        "Type": "Console",
+        "Color": "White",
+        "Weight": "14.7 lbs",
+        "Customer Reviews": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    },
+    "Xbox": {
+        "Type": "Console",
+        "Color": "Black",
+        "Weight": "9.7 lbs",
+        "Customer Reviews": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    },
+    "Switch": {
+        "Type": "Handheld",
+        "Color": "Black",
+        "Weight": "0.66 lbs",
+        "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
+    },
+    "Apple": {
+        "Type": "Wrist Accessory",
+        "Color": "Black",
+        "Weight": "31.9 grams",
+        "Customer Reviews": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    },
+    "Samsung": {
+        "Type": "Wrist Accessory",
+        "Color": "Grey",
+        "Weight": "28.7 grams",
+        "Customer Reviews": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    },
+    "Fitbit": {
+        "Type": "Wrist Accessory",
+        "Color": "Gold",
+        "Weight": "24.66 grams",
+        "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
+    },
+    "Airpods": {
+        "Type": "Over-ear",
+        "Color": "Silver",
+        "Weight": "13.6 ounces",
+        "Customer Reviews": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    },
+    "Bose": {
+        "Type": "Over-ear",
+        "Color": "Black",
+        "Weight": "8.3 ounces",
+        "Customer Reviews": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    },
+    "Beats": {
+        "Type": "Over-ear",
+        "Color": "White/Gold",
+        "Weight": "9.17 ounces",
+        "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
+    }
+};
 
 function ready() {
     var addCartButton = document.getElementsByClassName('btn-warning')
@@ -181,62 +238,7 @@ function addItem(name, price, picture) {
 
 }
 
-var gameConsoles = {
-    "Playstation": {
-        "Type": "Console",
-        "Color": "White",
-        "Weight": "14.7 lbs",
-        "Customer Reviews": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-    },
-    "Xbox": {
-        "Type": "Console",
-        "Color": "Black",
-        "Weight": "9.7 lbs",
-        "Customer Reviews": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-    },
-    "Switch": {
-        "Type": "Handheld",
-        "Color": "Black",
-        "Weight": "0.66 lbs",
-        "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
-    },
-    "Apple": {
-        "Type": "Wrist Accessory",
-        "Color": "Black",
-        "Weight": "31.9 grams",
-        "Customer Reviews": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-    },
-    "Samsung": {
-        "Type": "Wrist Accessory",
-        "Color": "Grey",
-        "Weight": "28.7 grams",
-        "Customer Reviews": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-    },
-    "Fitbit": {
-        "Type": "Wrist Accessory",
-        "Color": "Gold",
-        "Weight": "24.66 grams",
-        "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
-    },
-    "Airpods": {
-        "Type": "Over-ear",
-        "Color": "Silver",
-        "Weight": "13.6 ounces",
-        "Customer Reviews": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-    },
-    "Bose": {
-        "Type": "Over-ear",
-        "Color": "Black",
-        "Weight": "8.3 ounces",
-        "Customer Reviews": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-    },
-    "Beats": {
-        "Type": "Over-ear",
-        "Color": "White/Gold",
-        "Weight": "9.17 ounces",
-        "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
-    }
-};
+
 
 function updateTable() {
     var selectedFeatures = getSelectedValues("featuresDropdownContent");
@@ -322,4 +324,24 @@ function getSelectedValues(dropdownId) {
 function getData(product, feature) {
 
     return gameConsoles[product][feature];
+}
+
+
+
+function decreaseItem() {
+    if(quantity > 1) {
+        quantity--;
+        updateQuantity();
+    }
+    // Call remove function if quantity reaches 0
+}
+
+function increaseItem() {
+
+        quantity++;
+        updateQuantity();
+}
+
+function updateQuantity() {
+    document.getElementById('cart-quantity').innerText = "Quantity: " + quantity;
 }

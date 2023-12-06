@@ -89,4 +89,12 @@ th {
 
 .cart-minus {
   text-decoration: none;
+  color: red;
+  cursor: pointer;
+}
+
+.cart-plus {
+  text-decoration: none;
+  color: green;
+  cursor: pointer;
 }
