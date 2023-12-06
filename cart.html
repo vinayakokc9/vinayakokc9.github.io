@@ -90,18 +90,14 @@
 
             <div class="col d-flex">
               <div class="d-flex flex-row">
-                <p class="mb-0 font-weight-bold pe-2"><strong>-</strong></p>
-                <p class="mb-0 font-weight-bold ">Quantity: 1</p>
-                <p class="mb-0 ps-2"><strong>+</strong></p>
+                <a class="mb-0 font-weight-bold cart-minus pe-2" href="#" onclick="decreaseItem(this);"><strong>-</strong></a>
+                <p class="mb-0" id="cart-quantity">Quantity: 1</p>
+                <p class="mb-0 font-weight-bold cart-plus ps-2" href="#" onclick="increaseItem(this);"><strong>+</strong></p>
               </div>
             </div>
-
-            
-            
             <div class="col d-flex justify-content-end">
               <div class="col cart-price">Price: $399.99</div>
-              <a class="delete-item " onclick="return deleteItem()">X</a>
-
+              <a class="delete-item" href="#" onclick="deleteItem(this);">X</a>
             </div>
           </div>
         </div>

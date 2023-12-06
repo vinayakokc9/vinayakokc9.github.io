@@ -86,3 +86,22 @@ th {
 .selected-options {
   margin-bottom: 10px;
 }
+
+.cart-minus {
+  text-decoration: none;
+  color: red;
+  cursor: pointer;
+}
+
+.cart-plus {
+  text-decoration: none;
+  color: green;
+  cursor: pointer;
+}
+
+.delete-item {
+  font-size: 18px;
+  text-decoration: none;
+  color: gray;
+  cursor: pointer;
+}

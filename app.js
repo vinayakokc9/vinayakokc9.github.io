@@ -3,6 +3,63 @@ if (document.readyState == 'loading') {
 } else {
     ready()
 }
+var quantity = 1;
+var gameConsoles = {
+    "Playstation": {
+        "Type": "Console",
+        "Color": "White",
+        "Weight": "14.7 lbs",
+        "Customer Reviews": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    },
+    "Xbox": {
+        "Type": "Console",
+        "Color": "Black",
+        "Weight": "9.7 lbs",
+        "Customer Reviews": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    },
+    "Switch": {
+        "Type": "Handheld",
+        "Color": "Black",
+        "Weight": "0.66 lbs",
+        "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
+    },
+    "Apple": {
+        "Type": "Wrist Accessory",
+        "Color": "Black",
+        "Weight": "31.9 grams",
+        "Customer Reviews": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    },
+    "Samsung": {
+        "Type": "Wrist Accessory",
+        "Color": "Grey",
+        "Weight": "28.7 grams",
+        "Customer Reviews": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    },
+    "Fitbit": {
+        "Type": "Wrist Accessory",
+        "Color": "Gold",
+        "Weight": "24.66 grams",
+        "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
+    },
+    "Airpods": {
+        "Type": "Over-ear",
+        "Color": "Silver",
+        "Weight": "13.6 ounces",
+        "Customer Reviews": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    },
+    "Bose": {
+        "Type": "Over-ear",
+        "Color": "Black",
+        "Weight": "8.3 ounces",
+        "Customer Reviews": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    },
+    "Beats": {
+        "Type": "Over-ear",
+        "Color": "White/Gold",
+        "Weight": "9.17 ounces",
+        "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
+    }
+};
 
 function ready() {
     var addCartButton = document.getElementsByClassName('btn-warning')
@@ -72,7 +129,7 @@ function searchBehavior() {
         alert("Search box cannot be blank. Please enter a value in the search field.")
     }
     else {
-        alert("No search results found. Please search for another item.")
+        window.location.href = "searchResultsNotFound.html"
     }
 }
 
@@ -118,18 +175,40 @@ function addItem(name, price, picture) {
         var cartItems = cartWindow.document.getElementsByClassName('product-list')[0]
         var itemContent =
             `
-        <div class="row border-top border-bottom">
+            <div class="row border-top border-bottom">
           <div class="row align-items-center product-item">
             <div class="col-2 ps-0">
-                <img src="${picture}" alt="" class="img-fluid"></div>
-            <div class="col">
-              <div class="row cart-title">${name}</div>
+              <img src="${picture}" alt="" class="img-fluid">
             </div>
-            <div class="col cart-quantity">Quantity: 1</div>
-            <div class="col cart-price">${price}</div>
+            <div class="col">
+              <div class=" cart-title">${name}</div>
+            </div>
+
+            <div class="col d-flex">
+              <div class="d-flex flex-row">
+                <a class="mb-0 font-weight-bold cart-minus pe-2" href="#" onclick="decreaseItem(this);"><strong>-</strong></a>
+                <p class="mb-0" id="cart-quantity">Quantity: 1</p>
+                <p class="mb-0 font-weight-bold cart-plus ps-2" href="#" onclick="increaseItem(this);"><strong>+</strong></p>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <div class="col cart-price">${price}</div>
+              <a class="delete-item" href="#" onclick="deleteItem(this);">X</a>
+            </div>
           </div>
         </div>
         `
+        // <div class="row border-top border-bottom">
+        //   <div class="row align-items-center product-item">
+        //     <div class="col-2 ps-0">
+        //         <img src="${picture}" alt="" class="img-fluid"></div>
+        //     <div class="col">
+        //       <div class="row cart-title">${name}</div>
+        //     </div>
+        //     <div class="col cart-quantity">Quantity: 1</div>
+        //     <div class="col cart-price">${price}</div>
+        //   </div>
+        // </div>
         cartRow.innerHTML = itemContent
         cartItems.append(cartRow)
 
@@ -159,62 +238,7 @@ function addItem(name, price, picture) {
 
 }
 
-var gameConsoles = {
-    "Playstation": {
-        "Type": "Console",
-        "Color": "White",
-        "Weight": "14.7 lbs",
-        "Customer Reviews": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-    },
-    "Xbox": {
-        "Type": "Console",
-        "Color": "Black",
-        "Weight": "9.7 lbs",
-        "Customer Reviews": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-    },
-    "Switch": {
-        "Type": "Handheld",
-        "Color": "Black",
-        "Weight": "0.66 lbs",
-        "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
-    },
-    "Apple": {
-        "Type": "Wrist Accessory",
-        "Color": "Black",
-        "Weight": "31.9 grams",
-        "Customer Reviews": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-    },
-    "Samsung": {
-        "Type": "Wrist Accessory",
-        "Color": "Grey",
-        "Weight": "28.7 grams",
-        "Customer Reviews": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-    },
-    "Fitbit": {
-        "Type": "Wrist Accessory",
-        "Color": "Gold",
-        "Weight": "24.66 grams",
-        "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
-    },
-    "Airpods": {
-        "Type": "Over-ear",
-        "Color": "Silver",
-        "Weight": "13.6 ounces",
-        "Customer Reviews": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-    },
-    "Bose": {
-        "Type": "Over-ear",
-        "Color": "Black",
-        "Weight": "8.3 ounces",
-        "Customer Reviews": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-    },
-    "Beats": {
-        "Type": "Over-ear",
-        "Color": "White/Gold",
-        "Weight": "9.17 ounces",
-        "Customer Reviews": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
-    }
-};
+
 
 function updateTable() {
     var selectedFeatures = getSelectedValues("featuresDropdownContent");
@@ -300,4 +324,44 @@ function getSelectedValues(dropdownId) {
 function getData(product, feature) {
 
     return gameConsoles[product][feature];
+}
+
+
+
+function decreaseItem(event) {
+    if(quantity > 0) {
+        quantity--;
+        updateQuantity(event);
+    }
+    
+    if(quantity < 1) {
+        deleteItem(event);
+    }
+    // Call remove function if quantity reaches 0
+}
+
+function increaseItem(event) {
+
+        quantity++;
+        updateQuantity(event);
+}
+
+function updateQuantity(event) {
+    parentElement = event.parentElement.querySelector('#cart-quantity');
+    console.log(parentElement);
+    parentElement.innerText = "Quantity: " + quantity;
+}
+
+function deleteItem(event) {
+    parentDivElement = event.parentElement.parentElement.parentElement;
+    
+    if(window.confirm("Delete item in your cart?")) {
+        if (parentDivElement) {
+            parentDivElement.remove();
+        }
+    }
+  
+    
+
+    
 }
