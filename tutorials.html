@@ -18,6 +18,62 @@
 
     <script src="app.js"> </script>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website Tutorial</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f1;
+        }
+
+        .tutorial-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .tutorial-slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .tutorial-content {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #34495e; 
+        }
+        .prev,
+        .next {
+            font-size: 18px;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 5px;
+            margin: 10px; 
+        }
+        .next {
+            background-color: #2ecc71;
+            
+    </style>
+
     <!-- <style>
         .horizontal-scrollable {
             overflow-x: auto;
@@ -62,7 +118,39 @@
 </head>
 
 <body>
-
+    <!-- Nav-Bar Size 
+        <style>
+        .search-box {
+    background-color: white;
+    font-size: 1.5rem; 
+    padding: 10px; 
+    width: 300px; 
+    }
+        .search-box {
+            font-size: 1.5rem; 
+            padding: 10px;
+            width: 600px; 
+        }
+        .navbar a svg.bi-cart {
+    width: 30px; 
+    height: 30px; 
+    }
+    .navbar-brand {
+          font-size: 2.0rem; 
+          padding: 10px; 
+        }
+    
+        
+        .nav-item.dropdown.d-flex.btn .nav-link {
+          font-size: 2.5rem; 
+          padding: 0.5px 20px; 
+        }
+    
+        .dropdown-item {
+          font-size: 2.0rem; 
+        }
+    -->
+    </style>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">ElderCart</a>
@@ -103,47 +191,88 @@
             </div>
         </div>
     </nav>
-    <h1 class="text-center py-3 border-bottom">Tutorials</h1>   
-    <div class="container-fluid  py-3 ">
-        
-        <div id="carouselExampleControls" class="carousel slide justify-content-center">
-            <div class="carousel-inner text-center">
-                <div class="carousel-item active">
-                        <div class="card-img-top d-block mx-auto" style="height: 100%;">
-                            <img src="images/Tut1.jpg" class=" img-fluid border-end p-3" alt="...">
-                        </div>  
-                  
-                </div>
-                <div class="carousel-item">
-                        <div class="card-img-top mx-auto" style="height: 100%;">
-                            <a href="https://www.youtube.com/watch?v=5laZecw4CP8">
-                                <img src="images/Tut2.jpg" class="img-fluid border-end p-3" alt="...">
-                            </a>
-                        </div>  
-                </div>
-                <div class="carousel-item">
-                        <div class="card-img-top d-block mx-auto" style="height: 100%;">
-                            <a href="https://www.nerdwallet.com/article/credit-cards/ensure-online-credit-card-purchases-safe">
-                                <img src="images/Tut3.jpg" class=" border-end p-3" alt="...">
-
-                            </a>
-                        </div>  
-                </div>
-                
+   
+    </div>
+    <div class="tutorial-container">
+        <div class="tutorial-slide" id="slide1">
+            <div class="tutorial-content">
+                <h1>Welcome to ElderCart</h1>
+                <img src="images/Tut1.jpg" alt="Welcome Image">
+                <p>Discover amazing products and great deals!</p>
+                <button class="next" onclick="nextSlide()">Next</button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev" data-bs-theme-value="dark">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next" data-bs-theme-value="dark">
-                <span class="carousel-control-next-icon" style="color:red" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
+
+        <div class="tutorial-slide" id="slide2">
+            <div class="tutorial-content">
+                <h1>Browse Products</h1>
+                <img src="images/BrowseProduct.png" alt="Welcome Image">
+                <p>Explore our wide range of products by category.</p>
+                <button class="prev" onclick="prevSlide()">Previous</button>
+                <button class="next" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <div class="tutorial-slide" id="slide3">
+            <div class="tutorial-content">
+                <h1>Add to Cart</h1>
+                <img src="images/Cart.png" alt="Welcome Image">
+                <p>Found something you like? Add it to your cart for a seamless shopping experience.</p>
+                <button class="prev" onclick="prevSlide()">Previous</button>
+                <button class="next" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+        <div class="tutorial-slide" id="slide4">
+            <div class="tutorial-content">
+                <h1>Checkout</h1>
+                <img src="images/Checkout.png" alt="Welcome Image">
+                <p>eview your items and proceed to checkout for a secure payment process.</p>
+                <button class="prev" onclick="prevSlide()">Previous</button>
+                <button class="next" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <div class="tutorial-slide" id="slide5" onclick="window.location.href='https://www.youtube.com/watch?v=5laZecw4CP8'">
+            <div class="tutorial-content">
+                <h1>Information Safety</h1>
+                <img src="images/Tut2.jpg" alt="Welcome Image">
+                <p>How to keep your information safe?</p>
+                <button class="prev" onclick="prevSlide()">Previous</button>
+                <button class="next" onclick="finishTutorial()">Finish</button>
+            </div>
+        </div>
+        
+        
     </div>
 
+    <script>
+        let currentSlide = 1;
+
+        function showSlide(slideNumber) {
+            const slides = document.querySelectorAll('.tutorial-slide');
+            slides.forEach(slide => slide.style.display = 'none');
+            document.getElementById(`slide${slideNumber}`).style.display = 'block';
+        }
+
+        function nextSlide() {
+            if (currentSlide < 5) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+
+        function finishTutorial() {
+            alert('Congratulations! You have completed the tutorial.');
+        }
+        showSlide(currentSlide);
+    </script>
     <div class="container">
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
@@ -154,6 +283,7 @@
           <p class="text-center text-body-secondary">&copy; ElderCart Inc</p>
         </footer>
       </div>
+
 
 
 
