@@ -331,11 +331,16 @@ function getData(product, feature) {
 function decreaseItem(event) {
     if(quantity > 0) {
         quantity--;
-        updateQuantity(event);
+       
     }
     
-    if(quantity < 1) {
+    if(quantity == 0 ) {
+        quantity++;
+        updateQuantity(event);
         deleteItem(event);
+    }
+    else {
+        updateQuantity(event);
     }
     // Call remove function if quantity reaches 0
 }
