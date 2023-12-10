@@ -9,7 +9,7 @@ This website is designed for people who are not tech savvy and prefer a simpler 
 ## Searching Products
 Currently, the search bar can recognize these keywords. 
 
-* "xbox", 
+* "xbox"
 * "switch"
 * "nintendo switch" 
 * "gaming consoles" 
