@@ -18,7 +18,7 @@
             function validateForm() {
                 var isValid = true;
                 var blankFields = [];
-    
+
                 $('form input:not(.search-box)').each(function () {
                     if ($(this).val() === '') {
                         isValid = false;
@@ -28,14 +28,14 @@
                         $(this).removeClass('is-invalid');
                     }
                 });
-    
+
                 if (!isValid) {
                     alert('Enter the following fields accurately: ' + blankFields.join(', '));
                 }
-    
+
                 return isValid;
             }
-    
+
             $('a[type="submit"]').click(function (e) {
                 e.preventDefault();
                 if (validateForm()) {
@@ -87,7 +87,7 @@
             }
         });
     </script>
-    
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -294,11 +294,15 @@
                         <td>1</td>
                         <td>$499.00</td>
                     </tr>
-                
+
                 </tbody>
             </table>
+            <div>
+                <p class="pt-3 my-0"><b>Shipping:</b> $2.50</p>
+                <p class="my-0"><b>Tax:</b> $3.40</p>
+                <p><b>Total:</b> $905.88</p>
+            </div>
 
-            <p class="pt-3">Total: $905.88</p>
         </section>
 
         <!-- Submit Button -->

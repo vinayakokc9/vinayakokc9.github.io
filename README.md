@@ -6,6 +6,27 @@
 
 This website is designed for people who are not tech savvy and prefer a simpler way to shop online.
 
+## Searching Products
+Currently, the search bar can recognize these keywords. 
+
+* "xbox", 
+* "switch"
+* "nintendo switch" 
+* "gaming consoles" 
+* "playstation"
+* "play station" 
+* "video games" 
+* "games"
+* "fitbit watch"
+* "samsung watch"
+* apple watch"
+* "fitness watch"
+* "apple airpods" 
+* "headphones"
+* "bose headphones"
+* "beats headphones"
+
+
 ## How to Run
 
 1.) Type into the search bar and click the search button.

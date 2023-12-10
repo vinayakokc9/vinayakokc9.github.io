@@ -20,74 +20,44 @@
 
 
 <body>
-  <style>
-    .search-box {
-background-color: white;
-font-size: 1.5rem; 
-padding: 10px; 
-width: 300px; 
-}
-    .search-box {
-        font-size: 1.5rem;
-        padding: 20px; 
-        width: 600px; 
-    }
-    .navbar a svg.bi-cart {
-width: 30px; 
-height: 30px; 
-}
 
-.navbar-brand {
-      font-size: 3.0rem; 
-      padding: 20px; 
-    }
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">ElderCart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </ul>
 
-    .nav-item.dropdown.d-flex.btn .nav-link {
-      font-size: 2.5rem; 
-      padding: 10px 20px; 
-    }
+      <ul class="navbar-nav d-flex me-auto">
+        <form class="d-flex" role="search">
+          <input class="search-box form-control text-center me-2" type="search" placeholder="What do I want?" aria-label="Search">
+          <a class="btn btn-outline-secondary" onclick="return searchBehavior();">Search</a>
+        </form>
+      </ul>
 
-    .dropdown-item {
-      font-size: 2.0rem;
-    }
-</style>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">ElderCart</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        </ul>
+      <a href="cart.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg>
+      </a>
+      
 
-        <ul class="navbar-nav d-flex me-auto">
-          <form class="d-flex" role="search">
-            <input class="search-box form-control me-2" type="search" placeholder="What do I want?" aria-label="Search">
-            <a class="btn btn-outline-secondary" onclick="return searchBehavior();">Search</a>
-          </form>
-        </ul>
-
-        <a href="cart.html">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-          </svg>
+      <li class="nav-item dropdown d-flex btn">
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         <big> &#9776;</big> 
         </a>
-        
-
-        <li class="nav-item dropdown d-flex btn">
-          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            &#9776;
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="Tutorials.html">Tutorials</a></li>
-            <li><a class="dropdown-item" href="AboutUs.html">About Us</a></li>
-          </ul>
-        </li>
-      </div>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="tutorials.html">Tutorials</a></li>
+          <li><a class="dropdown-item" href="aboutUs.html">About Us</a></li>
+        </ul>
+      </li>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <h1 class="text-center py-3 border-bottom">About Us</h1>
 
